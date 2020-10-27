@@ -1,5 +1,7 @@
 <?php
 
+namespace Alura\Arquitetura\Infra\Aluno;
+
 use Alura\Arquitetura\Dominio\Aluno\Aluno;
 use Alura\Arquitetura\Dominio\Aluno\AlunoNaoEncontrado;
 use Alura\Arquitetura\Dominio\Aluno\RepositorioAluno;
