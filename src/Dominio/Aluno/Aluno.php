@@ -1,6 +1,9 @@
 <?php
 
-namespace Alura\Arquitetura;
+namespace Alura\Arquitetura\Dominio\Aluno;
+
+use Alura\Arquitetura\Dominio\Cpf;
+use Alura\Arquitetura\Dominio\Email;
 
 class Aluno
 {
@@ -17,7 +20,7 @@ class Aluno
         $this->email = $email;
     }
     
-    public function comCpfEmailENome(string $numeroCpf, string $email, string $nome)
+    public static function comCpfNomeEEmail(string $numeroCpf, string $nome, string $email)
     {
         return new Aluno(new Cpf($numeroCpf), $nome, new Email($email));
     }
@@ -26,5 +29,25 @@ class Aluno
     {
         $this->telefones[] = new Telefone($ddd, $numero);
         return $this;
+    }
+
+    public function cpf(): string
+    {
+        return $this->cpf;
+    }
+
+    public function nome(): string
+    {
+        return $this->nome;
+    }
+
+    public function email(): string
+    {
+        return $this->email;
+    }
+
+    public function telefones(): array
+    {
+        return $this->telefones;
     }
 }

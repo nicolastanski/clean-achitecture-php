@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Arquitetura;
+namespace Alura\Arquitetura\Dominio\Aluno;
 
 class Telefone
 {
@@ -34,5 +34,15 @@ class Telefone
     public function __toString()
     {
         return "({$this->ddd}) {$this->numero}";
+    }
+
+    public function ddd(): string
+    {
+        return $this->ddd;
+    }
+
+    public function numero(): string
+    {
+        return $this->numero;
     }
 }
